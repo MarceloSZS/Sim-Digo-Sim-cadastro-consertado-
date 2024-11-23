@@ -1,0 +1,160 @@
+    *{
+    margin: 0px;
+    }
+
+
+
+
+
+    .exemplos{
+        display: flex;   
+        justify-content: center;
+        align-items: center;
+        height: 680px;
+        background-color: #f5f5f5;
+    }
+
+
+    .ex-base{
+        display: flex;
+        width: 1200px;
+        justify-content: center;
+        align-items: normal;
+        flex-direction: row-reverse;
+        gap: 50px;
+    }
+
+
+    #ex-texto{
+        display: flex;
+        width: 40%;
+        flex-direction: column ;
+        gap: 20px;
+    }
+
+    #ex-texto h1{
+        font-family: poppins;
+        color: #505050;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 42px;
+    }
+
+    #ex-texto h2{
+        font-family: poppins;
+        font-size: 25px;
+        color: #505050;
+        line-height: 30px;
+        font-weight: 300;
+
+    }
+
+    #ex-texto h3{
+        font-family: poppins;
+        color: #505050;
+        font-size: 18px;
+        font-weight: 300;
+
+    }
+
+    #ex-texto button{
+        width: 270px;
+        height: 44px;
+        background-color: #77593F;
+        color: white;
+        font-family: poppins;
+        font-size: 15px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+
+    #ex-imagem{
+        display: flex;
+        width: 60%;
+    }
+
+
+
+
+
+    @media only screen and (max-width: 768px) {
+
+        .exemplos{
+            display: flex;   
+            justify-content: center;
+            align-items: center;
+            background-color: #fdfdfd;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    
+    
+        .ex-base{
+            display: flex;
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+    
+    
+        #ex-texto{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column ;
+
+        }
+    
+        #ex-texto h1{
+            font-family: poppins;
+            color: #464545;
+            font-size: 35px;
+            font-weight: 400;
+            line-height: 42px;
+            justify-content: center;
+
+        }
+    
+        #ex-texto h2{
+            font-family: poppins;
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 300;
+            color: #555454;
+        }
+    
+        #ex-texto h3{
+            font-family: poppins;
+            font-size: 18px;
+            font-weight: 300;
+            color: #6e6e6e;
+        }
+    
+        #ex-texto button{
+            width: 270px;
+            height: 44px;
+            background-color: #77593F;
+            color: white;
+            font-family: poppins;
+            font-size: 15px;
+            border: none;
+            border-radius: 30px;
+        }
+    
+    
+        #ex-imagem{
+            display: flex;
+            width: 100%;
+        } 
+
+
+
+
+
+
+    }

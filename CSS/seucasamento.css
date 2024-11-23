@@ -1,0 +1,165 @@
+*{
+    margin: 0px;
+    }
+
+
+
+
+
+    .seucas{
+        display: flex;   
+        justify-content: center;
+        align-items: center;
+        height: 680px;
+        
+        background-position: left;
+    }
+
+
+    .seucas-base{
+        display: flex;
+        width: 1200px;
+        justify-content: center;
+        align-items: normal;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+
+    #seucas-texto{
+        display: flex;
+        width: 40%;
+        flex-direction: column ;
+        gap: 20px;
+    }
+
+    #seucas-texto h1{
+        font-family: poppins;
+        color: #505050;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 42px;
+    }
+
+    #seucas-texto h2{
+        font-family: poppins;
+        color: #505050;
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 300;
+
+    }
+
+    #seucas-texto h3{
+        font-family: poppins;
+        color: #505050;
+        font-size: 18px;
+        font-weight: 300;
+
+    }
+
+    #seucas-texto button{
+        width: 270px;
+        height: 44px;
+        background-color: #77593F;
+        color: white;
+        font-family: poppins;
+        font-size: 15px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+
+    #seucas-imagem{
+        display: flex;
+        width: 60%;
+    }
+
+
+
+
+
+    @media only screen and (max-width: 768px) {
+
+        .seucas{
+            display: flex;   
+            justify-content: center;
+            align-items: center;
+            background-image: linear-gradient(#f5f5f5, rgba(255, 255, 255, 0.459)), url(../Imagem/Background-Banner-Desktop.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    
+    
+        .seucas-base{
+            display: flex;
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+    
+    
+        #seucas-texto{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column ;
+
+        }
+    
+        #seucas-texto h1{
+            font-family: poppins;
+            color: #464545;
+            font-size: 35px;
+            font-weight: 400;
+            line-height: 42px;
+            justify-content: center;
+
+        }
+    
+        #seucas-texto h2{
+            font-family: poppins;
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 300;
+            color: #555454;
+        }
+    
+        #seucas-texto h3{
+            font-family: poppins;
+            font-size: 18px;
+            font-weight: 300;
+            color: #6e6e6e;
+        }
+    
+        #seucas-texto button{
+            width: 270px;
+            height: 44px;
+            background-color: #77593F;
+            color: white;
+            font-family: poppins;
+            font-size: 15px;
+            border: none;
+            border-radius: 30px;
+        }
+    
+    
+        #seucas-imagem{
+            display: flex;
+            width: 100%;
+        } 
+
+
+
+
+
+
+    }

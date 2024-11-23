@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+}
+
+
+/*Títulos*/
+.depoimentos-base h1{
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 35px;
+    color: #505050;
+    line-height: 40px;
+}
+
+.depoimentos-base h2{
+    font-family: poppins;
+    font-weight: 300;
+    font-size: 20px;
+    color: #505050;
+    margin-bottom: 10px;
+}
+
+
+
+
+.depoimentos{
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#f5f5f5, #f5f5f593), url(../Imagem/Background-Banner-Desktop.webp);
+    background-attachment: fixed;
+
+}
+
+.depoimentos-base{
+    display: flex;
+    width: 1200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+
+}
+
+/*Container pai dos Depoimentos*/
+
+.depcontent{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.depcontent .img-dep{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+/*Títulos*/
+
+.depcontent h1{
+    display: flex;
+    color: black;
+    font-family: poppins;
+    font-size: 19px;
+
+    
+}
+
+.depcontent p{
+    display: flex;
+    text-align: center;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 14px;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    line-height: 22px;
+}
+
+
+
+.star{
+    color: rgb(255, 166, 0);
+    font-size: 25px;
+}
+
+/*Depoimentos*/
+
+.dep1{
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfdfd77;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    align-items: center;
+    width: 353px;
+
+}
+
+.img-dep{
+    border-radius: 300px;
+}
+
+.dep2{
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfdfd77;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    align-items: center;
+    width: 353px;
+
+}
+
+.dep3{
+    display: flex;
+    flex-direction: column;
+    background-color: #fdfdfd77;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    align-items: center;
+    width: 353px;
+
+}
+
+
+
+
+
+
+
+                    @media only screen and (max-width: 768px) {
+
+                    /*Títulos*/
+                    .depoimentos-base h1{
+                        font-family: poppins;
+                        font-weight: 400;
+                        font-size: 35px;
+                        color: #505050;
+                        line-height: 40px;
+                    }
+
+                    .depoimentos-base h2{
+                        font-family: poppins;
+                        font-weight: 300;
+                        font-size: 20px;
+                        color: #505050;
+                        margin-bottom: 10px;
+                    }
+
+
+
+
+                    .depoimentos{
+                        display: flex;
+                        height: 100%;
+                        justify-content: center;
+                        align-items: center;
+                        background-image: linear-gradient(#f5f5f5, #f5f5f593), url(../Imagem/Background-Banner-Desktop.webp);
+                        background-attachment: fixed;
+
+                    }
+
+                    .depoimentos-base{
+                        display: flex;
+                        width: 90%;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        padding-top: 50px;
+                        padding-bottom: 50px;
+
+
+                    }
+
+                    /*Container pai dos Depoimentos*/
+
+                    .depcontent{
+                        display: flex;
+                        width: 90%;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 10px;
+                        justify-content: center;
+                    }
+
+                    .depcontent .img-dep{
+                        display: flex;
+
+                        justify-content: center;
+                        align-items: center;
+
+
+                    }
+
+
+                    /*Títulos*/
+
+                    .depcontent h1{
+                        display: flex;
+                        color: black;
+                        font-family: poppins;
+                        font-size: 19px;
+
+                        
+                    }
+
+                    .depcontent p{
+                        display: flex;
+                        text-align: center;
+                        font-family: poppins;
+                        font-weight: 400;
+                        font-size: 14px;
+                        justify-content: center;
+                        color: rgb(0, 0, 0);
+                        line-height: 22px;
+                    }
+
+
+
+                    .star{
+                        color: rgb(255, 166, 0);
+                        font-size: 25px;
+                    }
+
+                    /*Depoimentos*/
+
+                    .dep1{
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #fdfdfd77;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+                        border-radius: 20px;
+                        align-items: center;
+                        width: 100%;
+
+                    }
+
+                    .img-dep{
+                        border-radius: 300px;
+                    }
+
+                    .dep2{
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #fdfdfd77;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+                        border-radius: 20px;
+                        align-items: center;
+                        width: 100%;
+                        
+
+                    }
+
+                    .dep3{
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #fdfdfd77;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+                        border-radius: 20px;
+                        align-items: center;
+                        width: 100%;
+
+                    }
+
+
+                    }

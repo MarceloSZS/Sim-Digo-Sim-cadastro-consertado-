@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+}
+
+
+/*Títulos*/
+.planos-base h1{
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 35px;
+    color: white;
+    line-height: 40px;
+}
+
+.planos-base h2{
+    font-family: poppins;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+
+
+.planos{
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#b68f6c96, #f8d4b4e5), url(../Imagem/Background-Banner-Desktop.webp);
+    background-attachment: fixed;
+}
+
+.planos-base{
+    display: flex;
+    width: 1200px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+
+}
+
+/*Container pai dos Planos*/
+
+.content{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.content .img-planos{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+/*Títulos*/
+
+.content h1{
+    display: flex;
+    font-family: poppins;
+    font-size: 35px;
+
+    border-bottom: 2px solid white;
+}
+
+.content h4{
+    display: flex;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 16px;
+    justify-content: center;
+    color: white;
+    line-height: 30px;
+}
+
+
+/*Planos*/
+
+.plano1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: #896648e3;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.411);
+    align-items: center;
+    width: 353px;
+    transition: transform 0.5s ease;
+}
+
+.plano2{
+    display: flex;
+    flex-direction: column;
+    background-color: #896648e3;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.411);
+    align-items: center;
+    width: 353px;
+    transition: transform 0.5s ease;
+}
+
+.plano3{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    background-color: #896648e3;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.411);
+    align-items: center;
+    width: 353px;
+    transition: transform 0.5s ease;
+}
+
+
+.plano1:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    background-color: #c9976c79;
+}
+
+.plano2:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    background-color: #c9976c79;
+}
+
+.plano3:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    background-color: #c9976c79;
+}
+
+
+
+
+@media only screen and (max-width: 768px) {
+
+/*Títulos*/
+.planos-base h1{
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 35px;
+    color: white;
+    line-height: 40px;
+}
+
+.planos-base h2{
+    font-family: poppins;
+    font-weight: 300;
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.planos{
+    display: flex;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#da9f6b96, #b6885fe5), url(../Imagem/Background-Banner-Desktop.webp);
+}
+
+.planos-base{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+
+
+}
+
+/*Container pai dos Planos*/
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.content .img-planos{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+/*Títulos*/
+
+.content h1{
+    display: flex;
+    font-family: poppins;
+    font-size: 35px;
+
+    border-bottom: 2px solid white;
+}
+
+.content h4{
+    display: flex;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 16px;
+    justify-content: center;
+    color: white;
+    line-height: 30px;
+}
+
+
+/*Planos*/
+
+.plano1{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #896648e3;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.411);
+    align-items: center;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.plano2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #896648e3;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.411);
+    align-items: center;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.plano3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #896648e3;
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    border-radius: 20px;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.411);
+    align-items: center;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+
+.plano1:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    background-color: #c9976c79;
+}
+
+.plano2:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    background-color: #c9976c79;
+}
+
+.plano3:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
+    background-color: #c9976c79;
+}
+
+}

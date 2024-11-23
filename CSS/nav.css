@@ -1,0 +1,154 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+* {
+    margin: 0;
+}
+
+/* Sessão */
+.nav {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Base */
+.nav-base {
+    display: flex;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+/* Logo */
+.nav-base .logo {
+    width: 25%;
+}
+
+/* Menu */
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    font-family: poppins;
+    font-weight: 300;
+    transition: transform 0.5s ease;
+}
+
+.menu ul li a:hover {
+    color: #E8D2B9;
+    transform: scale(1.1);
+}
+
+#burguer {
+    display: none;
+}
+
+/* Botão */
+#cta {
+    background-color: #E8D2B9;
+    padding: 5px 32px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1px solid transparent;
+    display: inline-block;
+    color: #896648;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    transition: transform 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+#cta:hover {
+    background-color: #896548;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.button-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 2.5;
+    padding: 5px 0;
+}
+
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: flex;
+        height: 50px;
+        justify-content: center;
+    }
+
+    .nav-base {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    #burguer {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    .menu ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+        flex-direction: column;
+        overflow-x: hidden;
+        padding: 0;
+    }
+
+    .menu ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .menu ul li a {
+        color: white;
+        width: 100%;
+    }
+
+    .menu ul.show {
+        display: flex;
+    }
+
+    .nav-base .logo {
+        width: 50%;
+    }
+
+    #cta {
+        display: none;
+    }
+}

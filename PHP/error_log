@@ -1,0 +1,74 @@
+[18-Oct-2024 10:11:13 America/Sao_Paulo] PHP Warning:  Undefined variable $_servidor in /home/simdigos/public_html/PHP/processa_cadastro.php on line 17
+[18-Oct-2024 10:11:13 America/Sao_Paulo] PHP Warning:  Trying to access array offset on null in /home/simdigos/public_html/PHP/processa_cadastro.php on line 17
+[18-Oct-2024 10:15:38 America/Sao_Paulo] PHP Warning:  Undefined variable $_servidor in /home/simdigos/public_html/PHP/processa_cadastro.php on line 18
+[18-Oct-2024 10:15:38 America/Sao_Paulo] PHP Warning:  Trying to access array offset on null in /home/simdigos/public_html/PHP/processa_cadastro.php on line 18
+[18-Oct-2024 10:17:29 America/Sao_Paulo] PHP Warning:  Undefined variable $_servidor in /home/simdigos/public_html/PHP/processa_cadastro.php on line 18
+[18-Oct-2024 10:17:29 America/Sao_Paulo] PHP Warning:  Trying to access array offset on null in /home/simdigos/public_html/PHP/processa_cadastro.php on line 18
+[18-Oct-2024 10:18:42 America/Sao_Paulo] PHP Warning:  Undefined variable $_servidor in /home/simdigos/public_html/PHP/processa_cadastro.php on line 18
+[18-Oct-2024 10:18:42 America/Sao_Paulo] PHP Warning:  Trying to access array offset on null in /home/simdigos/public_html/PHP/processa_cadastro.php on line 18
+[18-Oct-2024 10:18:45 America/Sao_Paulo] PHP Warning:  Undefined variable $_servidor in /home/simdigos/public_html/PHP/processa_cadastro.php on line 18
+[18-Oct-2024 10:18:45 America/Sao_Paulo] PHP Warning:  Trying to access array offset on null in /home/simdigos/public_html/PHP/processa_cadastro.php on line 18
+[18-Oct-2024 10:20:13 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "password_BCRYPT" in /home/simdigos/public_html/PHP/processa_cadastro.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 36
+[18-Oct-2024 10:22:26 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "password_BCRYPT" in /home/simdigos/public_html/PHP/processa_cadastro.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 36
+[18-Oct-2024 10:22:29 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "password_BCRYPT" in /home/simdigos/public_html/PHP/processa_cadastro.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 36
+[18-Oct-2024 10:22:40 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "password_BCRYPT" in /home/simdigos/public_html/PHP/processa_cadastro.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 36
+[18-Oct-2024 10:23:24 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "password_BCRYPT" in /home/simdigos/public_html/PHP/processa_cadastro.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 36
+[18-Oct-2024 10:23:28 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "password_BCRYPT" in /home/simdigos/public_html/PHP/processa_cadastro.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 36
+[18-Oct-2024 10:24:07 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "password_BCRYPT" in /home/simdigos/public_html/PHP/processa_cadastro.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 36
+[18-Oct-2024 10:24:53 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "password_BCRYPT" in /home/simdigos/public_html/PHP/processa_cadastro.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 36
+[18-Oct-2024 10:24:55 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "password_BCRYPT" in /home/simdigos/public_html/PHP/processa_cadastro.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 36
+[18-Oct-2024 10:28:33 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "password_BCRYPT" in /home/simdigos/public_html/PHP/processa_cadastro.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 36
+[18-Oct-2024 10:28:39 America/Sao_Paulo] PHP Fatal error:  Uncaught Error: Undefined constant "password_BCRYPT" in /home/simdigos/public_html/PHP/processa_cadastro.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 36
+[18-Oct-2024 10:33:37 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'juninhorj_09@hotmail.com' for key 'email' in /home/simdigos/public_html/PHP/processa_cadastro.php:40
+Stack trace:
+#0 /home/simdigos/public_html/PHP/processa_cadastro.php(40): mysqli->query()
+#1 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 40
+[18-Oct-2024 10:36:43 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'juninhorj_09@hotmail.com' for key 'email' in /home/simdigos/public_html/PHP/processa_cadastro.php:40
+Stack trace:
+#0 /home/simdigos/public_html/PHP/processa_cadastro.php(40): mysqli->query()
+#1 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 40
+[25-Oct-2024 19:38:51 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'victor.luiz.eng@gmail.com' for key 'email' in /home/simdigos/public_html/PHP/processa_cadastro.php:30
+Stack trace:
+#0 /home/simdigos/public_html/PHP/processa_cadastro.php(30): mysqli->query()
+#1 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 30
+[25-Oct-2024 22:18:18 America/Sao_Paulo] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry 'vitinhobk6@gmail.com' for key 'email' in /home/simdigos/public_html/PHP/processa_cadastro.php:30
+Stack trace:
+#0 /home/simdigos/public_html/PHP/processa_cadastro.php(30): mysqli->query()
+#1 {main}
+  thrown in /home/simdigos/public_html/PHP/processa_cadastro.php on line 30

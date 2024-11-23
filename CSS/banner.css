@@ -1,0 +1,138 @@
+    
+    *{
+    margin: 0px;
+    
+    }
+
+
+
+    /*Títulos*/
+    #h1header{
+        font-family: Poppins;
+        font-weight: 400;
+        font-size: 50px;
+        color: white;
+        line-height: 45px;
+    }
+
+    #h2header{
+        font-size: 20px;
+        color: white;
+        font-family: poppins;
+        font-weight: 300;
+        line-height: 25px;
+        letter-spacing: 1px;
+    }
+
+
+
+    /*Botão*/
+    #btheader{
+        background-color: #E8D2B9;
+        padding: 12px 32px;
+        cursor: pointer;
+        border-radius: 30px;
+        border: 1px;
+        display: inline-block;
+        color: #896648;
+        font-family: poppins;
+        font-weight: 400;
+        font-size: 16px;
+        transition: transform 0.5s ease;
+    }
+
+    #btheader:hover{       
+        transform: scale(1.1);
+    }
+
+
+
+    /*Header*/
+    .header{
+        display: flex;
+        margin-top: -90px;
+        height: 100vh; 
+        justify-content: center;
+        background-image: linear-gradient(#89664867, #896648e5), url(../Imagem/Background-Banner-Desktop.webp);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    /*Base Header*/
+    .base-header{
+        display: flex;
+        flex-direction: row;
+        width: 1200px;
+        padding-top: 30px;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 0;
+
+    }
+
+
+    /*Texto*/
+    .base-header .texto{
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        gap: 20px;
+    }
+
+    
+ .base-header .imagem{
+    display: flex;
+    width: 45%;
+
+ }
+
+
+
+
+ @media only screen and (max-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-top: -60px;
+        padding: 0px;
+        background-image: linear-gradient(#89664867, #896648e5), url(../Imagem/Background-Banner-Desktop.webp);
+    }
+    .base-header{
+        justify-content: center;
+        display: flex;  
+        flex-direction: column-reverse;
+        width: 90vw;
+    }
+
+    .base-header .texto{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #h1header{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    #h2header{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .base-header .imagem{
+        width: 70%;
+    }
+}
+
+
+    
+
+
+

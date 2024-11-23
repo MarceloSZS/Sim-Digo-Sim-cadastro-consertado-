@@ -1,0 +1,85 @@
+
+/* Estilos do body formulário */
+
+.form {
+    background-image: linear-gradient(#896648cc, #896648ec), url(../Imagem/Background-Banner-Desktop.webp);
+    background-attachment: fixed;
+    background-position: top;
+    height: 600px;
+    padding-top: 50px;
+    font-family: poppins;
+}
+
+/* Div formulario */
+
+.form-container {
+    max-width: 350px;
+    margin: auto;
+    margin-bottom: 150px;
+    padding: 50px; 
+    border-radius: 8px;
+    border: none;
+    background-color: #e8d2b93a;
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.411);
+}
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 100px ;
+    color: rgba(255, 255, 255, 0.664);
+}
+
+.form-container label,
+.form-container input,
+.form-container textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: poppins;
+    color: white;
+    
+}
+.form-container input,
+.form-container textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px;
+    border-color: #3f2b2b;
+    background-color: #924e0100;
+}
+.form-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Estilo ao clicarrr no input */
+
+
+
+
+/* Estilos do botao */
+
+
+
+.form-container button {
+    background-color: #bd7b4296;
+    padding: 5px 32px;
+    cursor: pointer;
+    border-radius: 30px;
+    border: 1px solid transparent; /* Ajustado para evitar o colapso de borda */
+    display: inline-block;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    transition: transform 0.5s ease;
+    position: relative; /* Necessário para o link preencher o botão */
+    overflow: hidden; /* Garantir que o link não exceda os limites do botão */
+}
+
+.form-container button:hover {       
+    background-color: #c5793b;
+    color: #ffffff;
+    transform: scale(1.1);
+}

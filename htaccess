@@ -1,0 +1,11 @@
+# Ativar o motor de reescrita
+RewriteEngine On
+
+# Garantir que letras maiúsculas e minúsculas sejam ignoradas
+RewriteCond %{REQUEST_URI} [A-Z]
+RewriteRule ^(.*)$ ${lc:$1} [R=301,L]
+
+# Remover a extensão .php das URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]

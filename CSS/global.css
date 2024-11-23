@@ -1,0 +1,23 @@
+
+@import url(nav.css);  
+@import url(banner.css);
+@import url(exemplos.css);
+@import url(seucasamento.css);
+@import url(rodapé.css);
+@import url(planos.css);
+@import url(depoimentos.css);
+@import url(acordeão.css);
+@import url(contato.css);
+
+
+body, html {
+    overflow-x: hidden !important;
+    }
+     
+    @media (max-width: 786px){
+    body, html {
+    overflow-x: hidden!important;
+    }
+    }
+
+

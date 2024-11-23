@@ -1,0 +1,164 @@
+/* Fontes */
+@font-face {
+    font-family: 'Poppins';
+    src: url('Fonts/poppins-light-webfont.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('Fonts/poppins-regular-webfont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #461c00;
+    background-color: #f4f4f9;
+    scroll-behavior: smooth;
+}
+
+/* Fundo */
+body {
+    background-image: url("../Imagem/Background-Banner-Desktop.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container principal */
+.form-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 30px 40px;
+    background-color: #e8d2b9e9;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+/* Logo */
+.logo img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 80%;
+    height: auto;
+}
+
+/* Título */
+h2 {
+    color: #461c00;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+}
+
+label {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: left;
+    color: #461c00;
+}
+
+input[type="email"] {
+    padding: 12px 15px;
+    border: 1px solid #aa4400;
+    border-radius: 15px;
+    font-size: 16px;
+    outline: none;
+    background-color: #ffffff;
+    color: #461c00;
+    transition: box-shadow 0.3s ease;
+}
+
+input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+input:focus {
+    box-shadow: 0 0 5px #aa4400;
+    border-color: #8d613a;
+}
+
+/* Mensagens */
+.mensagem {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.mensagem .success {
+    color: #28a745; /* Verde sucesso */
+    font-weight: 600;
+}
+
+.mensagem .error {
+    color: #dc3545; /* Vermelho erro */
+    font-weight: 600;
+}
+
+/* Botão */
+button {
+    padding: 12px 20px;
+    background-color: #684d36e7;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #8d613ad2;
+    transform: scale(1.02);
+}
+
+button:active {
+    background-color: #553a26;
+    transform: scale(0.98);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .form-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input[type="email"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
