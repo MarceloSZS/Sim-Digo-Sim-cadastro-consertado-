@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['nome_usuario'] = $usuario['nome'];
 
             // Redireciona para a área autenticada
-            header("Location: ../dashboard");
+            header("Location: ../index.html");
             exit();
         } else {
             // Senha incorreta, redireciona com mensagem de erro

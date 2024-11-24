@@ -3,143 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar conta</title>
-    <link rel="stylesheet" href="CSS/Cadastro.css">
-    <link rel="shortcut icon" href="Favicon/Anel pintado.png" type="image/x-icon">
-    <style>
-        @font-face {
-            font-family: poppins;
-            src: url('Fonts/poppins-light-webfont.woff2') format('woff2');
-            font-weight: 300; 
-            font-style: normal;
-        }
-    
-        @font-face {
-            font-family: poppins;
-            src: url('Fonts/poppins-regular-webfont.woff2') format('woff2');
-            font-weight: 400; 
-            font-style: normal;
-        }
-    </style> 
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="CSS/cadastro.css"> <!-- Estilo externo -->
+    <script defer src="script.js"></script> <!-- Script externo -->
 </head>
 <body>
-    <div class="fundo">
-        <img src="Imagem/Background-Banner-Desktop.webp" alt="Imagem de fundo">
-    </div>
-    
-    <div class="container">
-        <h2>Criar conta</h2>
-        <form id="forms" method="POST" action="PHP/processa_cadastro.php">
-            <div class="form-group">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome">
-            </div>
-            <div class="form-group">
-                <label for="nome materno">Nome Materno:</label>
-                <input type="text" id="nome materno" name="nome materno">
-            </div>
-            <div class="form-group">
+    <main>
+        <h1>Formulário de Cadastro</h1>
+        <form id="forms" action="processa_cadastro.php" method="post">
+            <fieldset>
+                <legend>Informações Pessoais</legend>
+
+                <!-- Nome completo -->
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+                <!-- Nome da mãe -->
+                <label for="nome_materno">Nome da mãe:</label>
+                <input type="text" id="nome_materno" name="nome_materno" placeholder="Digite o nome da mãe" required>
+
+                <!-- CPF -->
                 <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf" maxlength="14"  placeholder="000.000.000-00"> 
-                <p id="cpf-validation-message"></p>
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail (Login):</label>
-                <input type="email" id="email" name="email">
-            </div>
-            <div class="form-group">
-                <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha">
-            </div>
-            <div class="form-group">
-                <label for="senha-confirmacao">Confirme sua senha:</label>
-                <input type="password" id="senha-confirmacao" name="senha-confirmacao">
-            </div>
-            <div class="form-group">
-                <label for="cep">CEP:</label>
-                <input type="text" id="cep" name="cep" maxlength="9">
-            </div>
-            <div class="form-group">
+                <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                <p id="cpf-validation-message" class="validation-message"></p> <!-- Mensagem dinâmica -->
+
+                <!-- Data de nascimento -->
+                <label for="data">Data de nascimento:</label>
+                <input type="date" id="data" name="data" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contato</legend>
+
+                <!-- E-mail -->
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+                <!-- Telefone Celular -->
+                <label for="telefoneCelular">Telefone Celular:</label>
+                <input type="text" id="telefoneCelular" name="telefoneCelular" placeholder="(00) 00000-0000" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço</legend>
+
+                <!-- Endereço -->
                 <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco">
-            </div>
-            <div class="form-group">
-                <label for="complemento">Complemento (opcional):</label><br>
-                <input type="text" id="complemento" name="complemento">
-            </div>
-            <div class="form-group">
-                <label for="bairro">Bairro:</label><br>
-                <input type="text" id="bairro" name="bairro">
-            </div>
-            <div class="form-group">
+                <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
+
+                <!-- Bairro -->
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" placeholder="Digite o bairro" required>
+
+                <!-- Cidade -->
                 <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" name="cidade">
-            </div>
-            <div class="form-group">
-                <label for="estado">Você mora em:</label>
-                <select id="estado" name="estado" >
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ" selected>Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
+                <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required>
+
+                <!-- Estado -->
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado" required>
                     <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                    <option value="EX">Estrangeiro</option>
+                    <option value="RJ" selected>Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <!-- Adicione mais estados conforme necessário -->
                 </select>
-            </div>
-            <div class="form-group">
-                <label for="data">Data de Casamento:</label>
-                <input type="date" id="data" name="data">
-            </div>
-            <div class="form-group">
-                <label for="telefoneCelular">TelefoneCelular:</label>
-                <input type="tel" id="telefoneCelular" name="telefoneCelular" oninput="handleTELEFONE_CELULARInput(event)" placeholder="(xx)xxxxx-xxxx" maxlength="15">
-            </div>
-            <div class="form-group-full">
-                <label>Sexo:</label>
-                <div class="radio-group">
-                    <select name="genero" id="genero">
-                        <option value="">Selecione</option>
-                        <option value="Masculino">Masculino</option>
-                        <option value="Feminino">Feminino</option>
-                        <option value="Outros">Outros</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group-full checkbox-container">
-                <input type="checkbox" id="termos" name="termos">
-                <label for="termos">Aceito as condições de uso e de <a href="#">Privacidade</a>.</label>
-            </div>
-            <button type="submit">Criar conta</button>
-            <button type="reset">Limpar Campos</button>        
+
+                <!-- CEP -->
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" placeholder="00000-000" maxlenght="9" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Dados de Acesso</legend>
+
+                <!-- Senha -->
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+                <!-- Confirmar senha -->
+                <label for="senha-confirmacao">Confirme sua senha:</label>
+                <input type="password" id="senha-confirmacao" name="senha-confirmacao" placeholder="Confirme sua senha" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações Adicionais</legend>
+
+                <!-- Gênero -->
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero" required>
+                    <option value="masculino" selected>Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <!-- Termos de uso -->
+                <label>
+                    <input type="checkbox" id="termos" name="termos">
+                    Aceito os <a href="termos.html" target="_blank">termos de uso</a> e <a href="privacidade.html" target="_blank">política de privacidade</a>.
+                </label>
+            </fieldset>
+
+            <!-- Mensagem de erro -->
+            <div id="mensagemErro" class="error-message"></div>
+            
+            <!-- Botões -->
+            <button type="submit">Cadastrar</button>
+            <button type="reset">Limpar</button>
         </form>
-        <div class="login-link">
-            Já tem uma conta? <a href="login.php">Entrar</a>
-        </div>
-        <br>
-        <div id="mensagemErro" style="color:red; display:none;"></div>
-    </div>
+    </main>
 </body>
 <script src="JS/script_cadastro.js"></script>
 </html>

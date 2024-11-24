@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const formData = new FormData(form);
 
         const nome = formData.get('nome')?.trim() ?? ""; 
-        const nomeMaterno = formData.get('nome materno')?.trim() ?? "";
+        const nome_materno = formData.get('nome_materno')?.trim() ?? "";
         const cpf = cpfInput.value.replace(/\D/g, ""); // Remove caracteres não numéricos do CPF
         const email = formData.get('email')?.trim() ?? "";
         const senha = formData.get('senha')?.trim() ?? "";
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Validações de todos os campos obrigatórios
         if (!nome) showError('Nome é obrigatório.');
-        else if (!nomeMaterno) showError('Nome materno é obrigatório.');
+        else if (!nome_materno) showError('Nome materno é obrigatório.');
         else if (!cpf || !validateCPF(cpf)) showError('CPF é obrigatório e deve ser válido.');
         else if (!email) showError('E-mail é obrigatório.');
         else if (!senha) showError('Senha é obrigatória.');
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (result.includes ("Erro ao cadastrar")) {
                         showError(result);
                     } else {
-                        window.location.href = '../login'; // Redireciona para a página de login
+                        window.location.href = './login.php'; // Redireciona para a página de login
                     }
                 } else {
                     showError("Ocorreu um erro ao processar o cadastro.");

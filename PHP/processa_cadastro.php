@@ -1,54 +1,61 @@
 <?php
 // Conexão com o banco de dados
-include("conexao.php");
+include 'db_connection.php'; // Ajuste o caminho conforme necessário
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recebe e sanitiza os dados do formulário
-    $nome = $conn->real_escape_string(trim($_POST['nome']));
-    $email = $conn->real_escape_string(trim($_POST['email']));
-    $senha = $conn->real_escape_string(trim($_POST['senha']));
-    $estado = $conn->real_escape_string(trim($_POST['estado']));
-    $data_casamento = $conn->real_escape_string(trim($_POST['data']));
-    $telefonecelular = $conn->real_escape_string(trim($_POST['telefoneCelular']));
-    $genero = $conn->real_escape_string(trim($_POST['genero'])); // Certifique-se de que o campo "genero" está presente no formulário
-    $termos = isset($_POST['termos']) ? 1 : 0;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Recebe os dados enviados via POST
+    $nome = trim($_POST['nome'] ?? '');
+    $nome_materno = trim($_POST['nome_materno'] ?? '');
+    $cpf = preg_replace('/\D/', '', $_POST['cpf'] ?? ''); // Remove caracteres não numéricos
+    $data_nascimento = $_POST['data'] ?? '';
+    $email = trim($_POST['email'] ?? '');
+    $telefoneCelular = trim($_POST['telefoneCelular'] ?? '');
+    $endereco = trim($_POST['endereco'] ?? '');
+    $bairro = trim($_POST['bairro'] ?? '');
+    $cidade = trim($_POST['cidade'] ?? '');
+    $estado = trim($_POST['estado'] ?? '');
+    $cep = preg_replace('/\D/', '', $_POST['cep'] ?? '');
+    $senha = password_hash(trim($_POST['senha'] ?? ''), PASSWORD_DEFAULT); // Hash da senha
+    $genero = $_POST['genero'] ?? '';
+    $termosAceitos = isset($_POST['termos']); // Checkbox retorna true/false
 
-    // Validação inicial
-    $erros = [];
-    if (empty($nome)) $erros[] = "O campo nome é obrigatório!";
-    if (empty($email)) $erros[] = "O campo e-mail é obrigatório!";
-    if (empty($senha)) $erros[] = "O campo senha é obrigatório!";
-    if (empty($estado)) $erros[] = "O campo estado é obrigatório!";
-    if (empty($data_casamento)) $erros[] = "A data do casamento é obrigatória!";
-    if (empty($telefonecelular)) $erros[] = "O telefone celular é obrigatório!";
-    if (!$termos) $erros[] = "Você deve aceitar os termos de uso!";
-
-    if (count($erros) > 0) {
-        foreach ($erros as $erro) {
-            echo "<p style='color: red;'>$erro</p>";
-        }
-        exit();
+    // Validação básica do lado do servidor (complementar ao JavaScript)
+    if (!$nome || !$cpf || !$email || !$senha || !$genero || !$termosAceitos) {
+        echo "Erro ao cadastrar: Preencha todos os campos obrigatórios.";
+        exit;
     }
 
-    // Hash da senha
-    $senha_hashed = password_hash($senha, PASSWORD_BCRYPT);
-
-    // Prepara e executa a consulta SQL com bind de parâmetros para evitar SQL injection
-    $stmt = $conn->prepare("INSERT INTO usuario (nome, email, senha, estado, data_casamento, telefonecelular, genero, aceitou_termos) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssssi", $nome, $email, $senha_hashed, $estado, $data_casamento, $telefonecelular, $genero, $termos);
+    // Insere os dados no banco de dados
+    $sql = "INSERT INTO usuarios (nome, nome_materno, cpf, data_nascimento, email, telefone_celular, endereco, bairro, cidade, estado, cep, senha, genero)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param(
+        'sssssssssssss',
+        $nome,
+        $nome_materno,
+        $cpf,
+        $data_nascimento,
+        $email,
+        $telefoneCelular,
+        $endereco,
+        $bairro,
+        $cidade,
+        $estado,
+        $cep,
+        $senha,
+        $genero
+    );
 
     if ($stmt->execute()) {
-        // Redireciona para a página de login
-        header("Location: ../login.php");
-        exit();
+        echo "Cadastro realizado com sucesso!";
     } else {
-        echo "<p style='color: red;'>Erro ao cadastrar: " . $stmt->error . "</p>";
+        echo "Erro ao cadastrar: " . $stmt->error;
     }
 
-    // Fecha a declaração preparada
     $stmt->close();
+    $conn->close();
+} else {
+    echo "Método inválido.";
 }
-
-// Fecha a conexão com o banco
-$conn->close();
 ?>
